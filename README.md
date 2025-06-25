@@ -15,12 +15,22 @@ Open ganache and select quick start ethereum.
 
 Open your browser and configure metamask. Create a wallet and store yourSecret Recovery Phrase in a safe place.
 
-#### Connecting metamask and ganache
-1. In metamask, go to settings > networks > add network. You can also get to this by clicking the metamask extension pinned on your browser > clicking the profile picture > settings > networks > add network
-2. Give your network any name of choice. 
-3. For New RPC URL go to ganache where you'll copy the RPC server url and paste in Metamask. 
-4. Chain ID for ganache is 1337. 
-5. You can name currency symbol as "ETH" and save. 
+#### Configure MetaMask to Use Ganache
+Open MetaMask extension.
+
+Click the network selector (top center), then "Add network manually".
+
+Fill in:
+
+Network Name: Ganache Localhost
+
+RPC URL: http://127.0.0.1:7545
+
+Chain ID: 1337 or 5777 (Ganache UI shows the right one)
+
+Currency Symbol: ETH
+
+Save and switch to this network.
 
 #### Importing an account from ganache to metamask
 1. Open ganache and select show keys on any account. The show keys button is the key icon.
