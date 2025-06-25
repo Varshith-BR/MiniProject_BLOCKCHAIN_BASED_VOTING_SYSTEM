@@ -12,6 +12,9 @@ This project implements a decentralized, blockchain-based voting platform using 
 **Varshith B R**
 
 ---
+## 🧭 System Design
+
+<img src="./systemdesignB-vote.png" alt="System Design" width="500"/>
 
 ## 📦 Prerequisites
 
