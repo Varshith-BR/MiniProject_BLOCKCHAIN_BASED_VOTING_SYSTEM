@@ -1,54 +1,83 @@
-# MiniProject
-## ABOUT
-A blockchain-based voting system that preserves voter privacy and increases accessibility, while keeping the voting system transparent, secure, and cost-effective. The system implements a voting framework that utilizes ethereum’s blockchain and smart contracts to achieve voter administration and auditable voting records. The implementation was deployed on ethereum’s test network to demonstrate usability, scalability, and efficiency.
+# 🗳️ Blockchain Based Voting System
 
-##Author: Varshith_BR
+## 📘 Overview
 
-Pre requisites:
-1. Node JS
-2. Ganache
-3. Metamask extension in the browser, preferably chrome.
+This project implements a decentralized, blockchain-based voting platform using **Ethereum smart contracts**. It ensures **voter privacy**, **transparency**, and **security**, while maintaining low infrastructure costs. The system utilizes the Ethereum blockchain to perform user registration, vote casting, and real-time result tracking.
 
-## SET UP INSTRUCTIONS
+> ⚙️ Deployed and tested on a local Ethereum network using **Ganache**, with MetaMask integration for user interaction.
 
-Open ganache and select quick start ethereum.
+---
 
-Open your browser and configure metamask. Create a wallet and store yourSecret Recovery Phrase in a safe place.
+## 👨‍💻 Author
+**Varshith B R**
 
-#### Configure MetaMask to Use Ganache
-Open MetaMask extension.
+---
 
-Click the network selector (top center), then "Add network manually".
+## 📦 Prerequisites
 
-Fill in:
+Ensure the following tools are installed before proceeding:
 
-Network Name: Ganache Localhost
+| Tool         | Purpose                              | Download Link                             |
+|--------------|---------------------------------------|--------------------------------------------|
+| Node.js      | JavaScript runtime environment        | https://nodejs.org/                        |
+| Ganache      | Local Ethereum blockchain emulator    | https://trufflesuite.com/ganache/         |
+| MetaMask     | Browser-based Ethereum wallet         | https://metamask.io/                       |
+| Truffle      | Smart contract development framework  | `npm install -g truffle`                  |
 
-RPC URL: http://127.0.0.1:7545
+---
 
-Chain ID: 1337 or 5777 (Ganache UI shows the right one)
+## 🚀 Setup Instructions
 
-Currency Symbol: ETH
+### 1️⃣ Start Ganache
 
-Save and switch to this network.
+- Launch **Ganache**.
+- Click on **"Quickstart Ethereum"** to spin up a local blockchain.
+- Note down the RPC URL (usually `http://127.0.0.1:7545`) and Chain ID (typically `1337` or `5777`).
 
-#### Importing an account from ganache to metamask
-1. Open ganache and select show keys on any account. The show keys button is the key icon.
-2. Copy the private key and click done.
-3. Open the metamask menu which can be accessed by clicking the profile picture and select import account.
-4. Paste the private key copied from ganache and click import.
+---
 
-#### Cloning the project
+### 2️⃣ Configure MetaMask to Connect with Ganache
 
+1. Open the MetaMask extension in your browser (preferably Chrome).
+2. Click the **Network dropdown** > **"Add Network"**.
+3. Fill in the details:
+   - **Network Name:** `Ganache Localhost`
+   - **New RPC URL:** `http://127.0.0.1:7545`
+   - **Chain ID:** `1337`
+   - **Currency Symbol:** `ETH`
+4. Click **Save** and **switch to this network**.
 
+---
+
+### 3️⃣ Import Ganache Account to MetaMask
+
+1. In Ganache, click the **key icon** next to any account to reveal the **private key**.
+2. In MetaMask:
+   - Go to your profile → **Import Account**
+   - Paste the private key
+   - Click **Import**
+
+You’ve now connected MetaMask to your local Ethereum network using a Ganache account.
+
+---
+
+## 🛠️ Project Installation
+
+### Step-by-step terminal commands:
+
+```bash
+# Clone the project
+git clone <repository-url>
 cd E-Voting_System_Blockchain
 
-npm i
+# Install dependencies
+npm install
 
+# Compile smart contracts
 truffle compile
 
-truffle migrateortruffle migrate --reset for subsequent runs
+# Deploy contracts to the local Ganache blockchain
+truffle migrate --reset
 
+# Start the development server (usually live-server or similar)
 npm start
-
-The project will open in the browser and metamask will ask you to select an account. Select the account we had imported earlier.
